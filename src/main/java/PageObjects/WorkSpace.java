@@ -38,10 +38,10 @@ public class WorkSpace {
   @FindBy(xpath = " //div[@class='item-name']/a[@data-resin-target='openfolder']")
   List<WebElement> allFolders;
 
-  @FindBy(xpath = "//button[@class='btn btn-primary ']//span[contains(text(),'Create')]")
+  @FindBy(xpath = "//span[@class='menu-toggle']//span[contains(text(),'Upload')]")
   private WebElement uploadTransitionLink;
 
-  @FindBy(xpath = "//li[@class='menu-item UploadMenuItem']/span[contains(text(),'Folder')]")
+  @FindBy(xpath = "//input[@type='file']")
   private WebElement uploadBtn;
 
   public WorkSpace(WebDriver driver) {
