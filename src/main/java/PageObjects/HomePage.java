@@ -5,7 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-/** Page Object class for All Users page */
 public class HomePage extends BaseClass {
   @FindBy(xpath = "//a[@class='user-nav--login user-nav--item']")
   private WebElement loginLink;

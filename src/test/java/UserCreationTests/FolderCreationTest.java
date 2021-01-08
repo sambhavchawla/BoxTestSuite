@@ -6,7 +6,6 @@ import static org.junit.Assert.assertTrue;
 
 public class FolderCreationTest extends BaseClass {
 
-  /** Tries to create user with repeated name and email */
   @Test
   public void verifyFolderCreation() {
     String folderToBeCreated = "TestFolder";

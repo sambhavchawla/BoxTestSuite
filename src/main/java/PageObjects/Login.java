@@ -7,7 +7,6 @@ import org.openqa.selenium.support.PageFactory;
 
 import static org.junit.Assert.assertTrue;
 
-/** Page Object class for All Users page */
 public class Login extends BaseClass {
 
   @FindBy(className = "user-nav--login user-nav--item")

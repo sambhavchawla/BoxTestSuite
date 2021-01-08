@@ -10,7 +10,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 
-/** Provides common setup and cleanup methods Also provides some common Assertion methods */
 public class BaseClass {
 
   protected WebDriver driver;
