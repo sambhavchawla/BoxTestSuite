@@ -1,0 +1,10 @@
+**/*.iml
+**/pom.xml.versionsBackup
+**/rebel.xml
+dependency-reduced-pom.xml
+target
+.idea
+.settings
+.classpath
+.project
+
