@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class WorkSpace {
+public class WorkSpace extends BaseClass {
 
   private WebDriver driver;
 

@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import static org.junit.Assert.assertTrue;
 
 /** Page Object class for All Users page */
-public class Login {
+public class Login extends BaseClass {
 
   @FindBy(className = "user-nav--login user-nav--item")
   private WebElement loginLink;
@@ -28,8 +28,6 @@ public class Login {
   @FindBy(xpath = "//div[@class='login-container']/h1")
   private WebElement loginPageHeader;
 
-  private WebDriver driver;
-
   public Login(WebDriver driver) {
     this.driver = driver;
     PageFactory.initElements(driver, this);
@@ -38,6 +36,7 @@ public class Login {
   public WorkSpace userLogin(String username, String password) {
     loginTxtBox.sendKeys(username);
     loginSubmitBtn.click();
+    waitForElementDisplay(passwordTxtBox);
     passwordTxtBox.sendKeys(password);
     passwordSubmitBtn.click();
     return PageFactory.initElements(driver, WorkSpace.class);
