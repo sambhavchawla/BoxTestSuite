@@ -1,5 +1,6 @@
 package UserCreationTests;
 
+import Utilities.FileUtils;
 import org.junit.Test;
 
 /** Tests scenarios in which user should be created */
@@ -9,6 +10,7 @@ public class FileUploadTest extends BaseClass {
   @Test
   public void verifyFileUpload() {
     workSpace = loginPage.userLogin(EMAIL, VALIDPASSWORD);
-    //        workSpace.uploadFile();
+    workSpace.uploadFile(
+        FileUtils.getFileFromTestResource("corona_cat.jpg").toAbsolutePath().toString());
   }
 }
