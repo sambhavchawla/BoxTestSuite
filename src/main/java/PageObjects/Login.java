@@ -7,7 +7,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import static org.junit.Assert.assertTrue;
 
+/** Page Object class for All Users page */
 public class Login extends BaseClass {
+
+  @FindBy(className = "user-nav--login user-nav--item")
+  private WebElement loginLink;
 
   @FindBy(id = "login-email")
   private WebElement loginTxtBox;
@@ -42,5 +46,15 @@ public class Login extends BaseClass {
     // Sign in text is separate on login and logout page that's why boolean condition ignoring cases
     assertTrue(
         "Not on login page", loginPageHeader.getText().equalsIgnoreCase("Sign in to your account"));
+  }
+
+  /**
+   * Navigates to new user page and returns its object
+   *
+   * @return
+   */
+  public Login navigateToLoginLink() {
+    loginLink.click();
+    return PageFactory.initElements(driver, Login.class);
   }
 }
